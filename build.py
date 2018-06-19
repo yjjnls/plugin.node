@@ -5,6 +5,9 @@ import sys
 import os
 import re
 import platform
+import shutil
+import traceback
+
 from shell import shell as call
 from cpt.packager import ConanMultiPackager
 from conans.client.loader_parse import load_conanfile_class
@@ -52,7 +55,7 @@ def build():
         CONAN_CHANNEL = 'testing'
         CONAN_UPLOAD_ONLY_WHEN_STABLE = False
         CONAN_STABLE_CHANNEL = 'testing'
-        # update_version(version)
+        update_version(version)
 
 
     CONAN_UPLOAD  = 'https://api.bintray.com/conan/%s/%s'%(CONAN_USERNAME,CONAN_CHANNEL)
@@ -97,5 +100,14 @@ if __name__ == '__main__':
     python build.py
 
     '''
+    os.rename('conanfile.py','conanfile.py.origin~')    
+    shutil.copy('conanfile.py.origin~','conanfile.py')
 
-    build()
+    try:
+        if os.path.exists('conanfile.py'):
+            build()
+    except:
+        traceback.print_exc()
+    finally:
+        os.remove('conanfile.py')
+        os.rename('conanfile.py.origin~','conanfile.py')
