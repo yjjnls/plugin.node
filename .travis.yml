@@ -1,0 +1,29 @@
+env:
+   global:
+     - CONAN_USERNAME=pluginx
+     - CONAN_LOGIN_USERNAME=mingyiz
+     - secure: rlMc5CGTOb/eWw5oGFoSh78t6pWFfv1M0W1kb7Q+8VMKiRFPkv/8xUyFeYZzaGQBePWYwqhNjn8oA8rgndXu1uVeIBjdg1fcJZztzalV+8YnBoeLyGoTlqZYfa2CDUW3r65/jr7F6dtDR7QeiQcmchFxaXY+AyQlcliMB9PtwjUExxYMYYJQyptaXb+hAbfHheMrMHY7jLHT+KGPaPJibx9IRfwydaqLAEPIbfmKPeaZQD7D7RJlpAxzG7lzjzQlq9JCYT7LqYC6vZwgbjbXw2YA2MxamCUG/Z/vQu12Z0OvNQitEAbcIMZsYh2zxL5gdLtYcKwPWVFOHCwgnrQqJz/8K2amV+mIjVKorudG6SUVrfShjMv44iAS5UX6doQKWC3M8UKyAryhk8m3dovRpZsKGpf1jTRFb0auDrNthzDOZ4NQxjBI9ICpjOtKTIEY3lD3LpXu5AMhSFP1cKHPbC/Gy7kj49Hamfy5+UGaYwO5L/CEw0psjjGdqHND3zOZgZO1TgO70NdhEWtaRJwjrKZ+7sEousGT02mfc5EwDMGBoBQN1+Ld9gvXFkFHA0FEP34JYELkepuWbwMd8Z2DOBGegsUZERiMquTdyCGIiN6b/Xf9GGi/jRrn8Lb5DUmoRo+Iqjmf5qltIBI4Zd1NVzaUqmc5PI8lv0eLZe2xUZk=
+
+linux: &linux
+   os: linux
+   sudo: required
+   language: python
+   python: "2.7"
+   services:
+     - docker
+osx: &osx
+   os: osx
+   language: generic
+matrix:
+   include:
+      - <<: *linux
+        env:  CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=yjjnls/conangcc49 CONAN_BUILD_TYPES=Release CONAN_ARCHS=x86_64
+
+install:
+  - sudo pip install conan --upgrade
+  - sudo pip install conan_package_tools bincrafters_package_tools
+  - sudo pip install shell
+  - sudo conan user
+
+script:
+  - sudo python build.py
