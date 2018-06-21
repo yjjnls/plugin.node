@@ -46,7 +46,7 @@ addons:
       description: "<Your project description here>"
     notification_email: yuanjunjie@kedacom.com
     build_command_prepend: "mkdir -p build && cd build && cmake ../plugin"
-    build_command: "make"
+    build_command: "cd build && make"
     branch_pattern: coverity_scan
 
 script:
