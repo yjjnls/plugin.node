@@ -1,23 +1,26 @@
 env:
-   global:
-     - CONAN_USERNAME=pluginx
-     - CONAN_LOGIN_USERNAME=mingyiz
-     - secure: cMZappeazgtFBcsHCjO/Smg5+JBuPTycF+MmBCZ3MkqRMQAHjP5yv9WIz9URkbwpJ4oWqNk1btnuGu6dX4vPmMCGkkL/kEJZ+TFS3+DzPJUEoEeGczcFPi2JKCfbugSHzAmLxx0tiXuy0w0WXqeOOucA5i46sy4IEukQZL7xsh1G/OjH2z1uvwV7ASlM8sRRzxIvtDlUsJR90oBm0DBrhK1TLKy3nsY3mRWpzoEwCi3dUdxrovrUdEgRjl8SB9bykBUzrvPExSOivKCo0K4bdD7wMdYy+9mA2nt2Uf3Vrx8/V9e0C5E968iSPyfvjAt69SjRHvWaQ4xbT2++lTlRoES5S7gtq7Zn+aNxYFaqhpQlxfMLBkA6wEr1AtRG2t/uX15bGyii1L6vhnqiVJcO8beSXm1jw2th3bI+alN5cSOBZhqEV3J7v9D5UAXILtKJ0MhZAyf7DUFVgMphHLsHOkYX/TvRg2QwRVTtCJReDrbLtyc2Jr6vNy/2FiR8P6vwX1I3hc/ByKRBZxk/Xs40AFAXemlqHz8OazEWCZjrFVHd7uEFuPXwfGZxALLTN2ypQN/B3ZkTa1gFpg5FnQwATMy61Yz0wyB70prVuicw5e4nYahXW6IdSabmWHr2/mSxScboBHGLbSqJnmanCbigq7S25Ed9HG8/b6hD9KJuSZs=
-     - secure: ZZre6KdpbHQvVPackOa2a35zqltWKX8qtHCWSphg4oufrhdrS+GUUvBegFcfnPLte02pMREep2XT8496E+6rXrIayvBKhFmIdGK2fNKH7scbLfp1qH2aMn5Zwj/YRDumCHjeYlWrNJ7MHVFv9JZKAID5BcgvDffM0rVwqG83CZxA44s8Uwp6nXbgwSwhaUuYaZVkrrQl7BJ/ttmCGX0bWYFgA7sfyTi4zVdbSVEO2zZNbtYouH9MFeggJAKNYpe6rFMZy6KAwhy/ouzBBcGETcODNhMNSpDTod+QOexSRzL4a3FenTdxfCjJSOypo6KIYDaPje++cA4LnqnnBFb4mqx3i5bRqje6LBLMs1/26qs5hkHq+T2p7Vj2XTqw+zsM0s1byaKlIsXpqhZcWKnGH6Vt3gNlBeK9N4QFSiKzXgZPKaHLpqz6n0iKA4woUl855L1pBu8UKZ8la+21CwcsVCTibfl65u4iIcHT6lXPy9cYjv4oIG1bpLF5JCL5g/SREfJfsQ6Z6HcZA9DOcecir/Ud3bONWcWgIdvFOExfuz6Ueilk81j/U2wfmqRmwStyPre0iQTCFMmeOmAkvEMwsQzSxfCPOcdyQpw8ipFyygfHBIMoCuHT/e4mlcvc6lfJHQ5zyOK80sFTQZY0WTWR62TaGh6Y8JVHaiOXCG4xYPU=
+  global:
+    - CONAN_USERNAME=yjjnls
+    - CONAN_LOGIN_USERNAME=yjjnls
+    - secure: "cMZappeazgtFBcsHCjO/Smg5+JBuPTycF+MmBCZ3MkqRMQAHjP5yv9WIz9URkbwpJ4oWqNk1btnuGu6dX4vPmMCGkkL/kEJZ+TFS3+DzPJUEoEeGczcFPi2JKCfbugSHzAmLxx0tiXuy0w0WXqeOOucA5i46sy4IEukQZL7xsh1G/OjH2z1uvwV7ASlM8sRRzxIvtDlUsJR90oBm0DBrhK1TLKy3nsY3mRWpzoEwCi3dUdxrovrUdEgRjl8SB9bykBUzrvPExSOivKCo0K4bdD7wMdYy+9mA2nt2Uf3Vrx8/V9e0C5E968iSPyfvjAt69SjRHvWaQ4xbT2++lTlRoES5S7gtq7Zn+aNxYFaqhpQlxfMLBkA6wEr1AtRG2t/uX15bGyii1L6vhnqiVJcO8beSXm1jw2th3bI+alN5cSOBZhqEV3J7v9D5UAXILtKJ0MhZAyf7DUFVgMphHLsHOkYX/TvRg2QwRVTtCJReDrbLtyc2Jr6vNy/2FiR8P6vwX1I3hc/ByKRBZxk/Xs40AFAXemlqHz8OazEWCZjrFVHd7uEFuPXwfGZxALLTN2ypQN/B3ZkTa1gFpg5FnQwATMy61Yz0wyB70prVuicw5e4nYahXW6IdSabmWHr2/mSxScboBHGLbSqJnmanCbigq7S25Ed9HG8/b6hD9KJuSZs="
+  #  bintray api key for yjjnls 
+    - secure: "ZZre6KdpbHQvVPackOa2a35zqltWKX8qtHCWSphg4oufrhdrS+GUUvBegFcfnPLte02pMREep2XT8496E+6rXrIayvBKhFmIdGK2fNKH7scbLfp1qH2aMn5Zwj/YRDumCHjeYlWrNJ7MHVFv9JZKAID5BcgvDffM0rVwqG83CZxA44s8Uwp6nXbgwSwhaUuYaZVkrrQl7BJ/ttmCGX0bWYFgA7sfyTi4zVdbSVEO2zZNbtYouH9MFeggJAKNYpe6rFMZy6KAwhy/ouzBBcGETcODNhMNSpDTod+QOexSRzL4a3FenTdxfCjJSOypo6KIYDaPje++cA4LnqnnBFb4mqx3i5bRqje6LBLMs1/26qs5hkHq+T2p7Vj2XTqw+zsM0s1byaKlIsXpqhZcWKnGH6Vt3gNlBeK9N4QFSiKzXgZPKaHLpqz6n0iKA4woUl855L1pBu8UKZ8la+21CwcsVCTibfl65u4iIcHT6lXPy9cYjv4oIG1bpLF5JCL5g/SREfJfsQ6Z6HcZA9DOcecir/Ud3bONWcWgIdvFOExfuz6Ueilk81j/U2wfmqRmwStyPre0iQTCFMmeOmAkvEMwsQzSxfCPOcdyQpw8ipFyygfHBIMoCuHT/e4mlcvc6lfJHQ5zyOK80sFTQZY0WTWR62TaGh6Y8JVHaiOXCG4xYPU="
+  #  COVERITY_SCAN_TOKEN for yjjnls
+    - secure: "T01662LDodrLpZlHuEe1qJguoNj7lJbjtgQRwKJD/NmsDdUo5cCgPjI4mdfzGjlBuBOTHadOM2Il0OxXHPzkyxHufjv1udBW1YOdWwYwuKFJe1tm+F6u5fqWqxJxM9xetklBkdry75bN3lJA7h8HWcB3eGlWT8vJTP70j6UtYGAk3SZm5twTeyOf+6kOhZqA39Z4azUpG8zKqQmuxqq8WHMtRyxuKYftQkDW6yDyV1+a5qUIOJdhLSbbi2Qsij2GYjZKtsMEB+FLV6yVb6gm29DaELmSZIbAbgjQoJ8Zfp4XwdduFNKOj3XuEUOkC21BGwXjBScZcPBgU4vby6doe7rbWdWwS0jl/29g+6D2L9iOzQ8KGxxNIuSrNCaM2lrGg1zggirYYQoGYWVoN+EQ9KYtZ6c3b6ZrBAcmrIffML5BM0eGz/kkTkJkMTlg8BpDVFXQU5xcviEmqRnisdtJ+gmnvtPd1FQ20B2kO2lh/f5yVzu2+Dq95SyRaD/KI8gpPm1W5QJqbrsYUtM+jwA3B6Q36Noc2tUxo5kSmwveo6/3MjyWW2zqEY3m7ulAAIbGWN4DkcZS4D9Oz6gALQs4s/Y83zbbcOa7QC5On0PTwDp00MejCXUxaxoETmuJVK3hxqDWj767njd/FJUxYF56oKdI046ay7VJvC9lUyomZvA="
 linux: &linux
-   os: linux
-   sudo: required
-   language: python
-   python: "2.7"
-   services:
-     - docker
+  os: linux
+  sudo: required
+  language: python
+  python: "2.7"
+  services:
+    - docker
 osx: &osx
-   os: osx
-   language: generic
+  os: osx
+  language: generic
 matrix:
-   include:
-      - <<: *linux
-        env:  CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_BUILD_TYPES=Release CONAN_ARCHS=x86_64
+  include:
+    - <<: *linux
+      env:  CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_BUILD_TYPES=Release CONAN_ARCHS=x86_64
 
 install:
   - sudo pip install conan --upgrade
@@ -25,5 +28,16 @@ install:
   - sudo pip install shell
   - sudo conan user
 
+addons:
+  coverity_scan:
+    project:
+      name: "yjjnls/plugin.node"
+      description: "<Your project description here>"
+    notification_email: x-jj@foxmail.com
+    build_command_prepend: 
+    build_command: "sudo python build.py"
+    branch_pattern: coverity_scan
+
 script:
-  - sudo python build.py
+  - if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then sudo python build.py ; fi
+  # - sudo python build.py
