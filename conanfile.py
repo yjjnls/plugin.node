@@ -16,7 +16,7 @@ def _UNUSED(*param):
 
 class NodePlugin(ConanFile):
     name = "plugin.node"
-    version = "0.5.6-dev"
+    version = "0.5.6-dev.5.5"
     url = "https://github.com/Mingyiz/plugin.node"
     homepage = url
     description = "Node.js addon for c plugin dynamic."

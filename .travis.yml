@@ -27,15 +27,26 @@ install:
   - sudo pip install conan_package_tools bincrafters_package_tools
   - sudo pip install shell
   - sudo conan user
+  - yes|sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+  - yes|sudo apt-get update
+  - sudo apt-get install gcc-4.9
+  - sudo apt-get install g++-4.9
+  - sudo rm -f /usr/bin/gcc /usr/bin/g++  
+  - sudo ln -s /usr/bin/gcc-4.9 /usr/bin/gcc  
+  - sudo ln -s /usr/bin/g++-4.9 /usr/bin/g++
+  - wget https://cmake.org/files/v3.11/cmake-3.11.3-Linux-x86_64.tar.gz
+  - tar -xf cmake-3.11.3-Linux-x86_64.tar.gz
+  - sudo cp -rf cmake-3.11.3-Linux-x86_64/bin /usr/local
+  - sudo cp -rf cmake-3.11.3-Linux-x86_64/share /usr/local
 
 addons:
   coverity_scan:
     project:
       name: "yjjnls/plugin.node"
       description: "<Your project description here>"
-    notification_email: x-jj@foxmail.com
-    build_command_prepend: 
-    build_command: "sudo python build.py"
+    notification_email: yuanjunjie@kedacom.com
+    build_command_prepend: "sudo conan install ."
+    build_command: "sudo conan build ."
     branch_pattern: coverity_scan
 
 script:
