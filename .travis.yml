@@ -41,7 +41,6 @@ install:
   - wget https://nodejs.org/dist/v10.4.0/node-v10.4.0-linux-x64.tar.xz 
   - tar -xf node-v10.4.0-linux-x64.tar.xz
   - sudo cp -rf node-v10.4.0-linux-x64/* /usr/local
-  - popd
   - sudo npm install -g node-gyp 
 
 addons:
