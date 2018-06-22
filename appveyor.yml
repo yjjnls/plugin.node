@@ -5,13 +5,6 @@ environment:
     PYTHON_VERSION: "2.7.8"
     PYTHON_ARCH: "32"
 
-#    CONAN_REFERENCE: pluginx/0.3.1
-    CONAN_USERNAME: pluginx
-    CONAN_LOGIN_USERNAME: mingyiz
-    CONAN_PASSWORD:
-      secure: s+BOuh3hBuWX0CC7gWS+wExeBRmKVO+EcijzMovdqV+95A+O7rMo2D/LnBjxW0IY
-    
-
 
     matrix:
         - CONAN_VISUAL_VERSIONS: 14

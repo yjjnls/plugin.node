@@ -1,23 +1,17 @@
-env:
-   global:
-     - CONAN_USERNAME=pluginx
-     - CONAN_LOGIN_USERNAME=mingyiz
-     - secure: "wq2KEzlkXCO/DJmQGj3gcwlTNiZMNfS9r5UorcTl9PWuAeztLyX3pH+7OBxBfMR1/RtIAaTNeE39qJJ05hV37gdvlcmM8cs+vaUxxfO0Ba0meUbfb7yi2EW8vM+6uoDtdzWvNtNMbmCCKTgFe7WvmLVrrx1tvcr7wlOaFZWtOFdACRsQlJhlzljxibmEio58S0jWCFNC/mh3k3H8CQUk43yoWxuyVnWe07WzYgfEnG9YzBsxDCr02/tVsTNE9HsD0BW0g/3W936r8HNoqFDjVtpKGF5CGbFEtdRhhYg5DS3Nt8tn6IE+3swS2ofZ8rvAV8jp/bXBW+r4IPn51sdxyYDV+ehJjY6mjf7Vs3mr1UNwJNVpcqBpUSCpaOt/VvMgVjTGO+bs+sNCFOme5sZfEjtZfsYaX/QYfyrAlNYRzN+l5CT8HBpn+rsRVQAQ2FW04VxQzgDHhfFylYyihBrEFVFLPEdT10evGLUXGJTDv7+xFiFQDbWUWuxL5DXrXBPmkkWE4FFhlYC3Hxo26dPsy3sjj5mtP14+87TG2dhF2p/EK5jWtEkYfleU48galh2gJLg6D6HYv2pfGywB3lBDrfeHjPnhqhjH9qzJ0RLP66XrASardbLhiD4gGgVLCdUOTkMqhbmBbhJug8rXC+iK4n/xnJsnE4CkJlsIqMamYzg="
-
 linux: &linux
-   os: linux
-   sudo: required
-   language: python
-   python: "2.7"
-   services:
-     - docker
+  os: linux
+  sudo: required
+  language: python
+  python: "2.7"
+  services:
+    - docker
 osx: &osx
-   os: osx
-   language: generic
+  os: osx
+  language: generic
 matrix:
-   include:
-      - <<: *linux
-        env:  CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=yjjnls/conangcc49 CONAN_BUILD_TYPES=Release CONAN_ARCHS=x86_64
+  include:
+    - <<: *linux
+      env:  CONAN_GCC_VERSIONS=4.9 CONAN_DOCKER_IMAGE=lasote/conangcc49 CONAN_BUILD_TYPES=Release CONAN_ARCHS=x86_64
 
 install:
   - sudo pip install conan --upgrade
@@ -25,5 +19,15 @@ install:
   - sudo pip install shell
   - sudo conan user
 
+addons:
+  coverity_scan:
+    project:
+      name: ${TRAVIS_COVERITY_SCAN_PROJECT_NAME} # yjjnls/plugin.node
+    notification_email: ${TRAVIS_COVERITY_SCAN_NOTIFICATION_EMAIL}
+    build_command_prepend: "chmod +x .travis/install.sh && ./.travis/install.sh && mkdir -p build && cd build && sudo conan install .. && cmake ../plugin"
+    build_command: "make"
+    branch_pattern: coverity_scan
+
 script:
-  - sudo python build.py
+  - if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then sudo python build.py ; fi
+  # - sudo python build.py
