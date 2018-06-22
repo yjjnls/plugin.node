@@ -29,7 +29,11 @@ class TestPackageConan(ConanFile):
     #    cmake.build()
 
     def test(self):
-        self.run("sudo pip install cpplint")
+        if platform.system() == "Windows":
+            self.run("pip install cpplint")
+        else:
+            self.run("sudo pip install cpplint")
+
         for (root, dirs, files) in os.walk("%s/../addon/src" % os.path.dirname(__file__)):
             for filename in files:
                 print os.path.join(root,filename)
