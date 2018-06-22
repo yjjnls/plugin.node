@@ -25,22 +25,22 @@ Python >=2.7  and Node >=10 is required
 # CI environment
 ## Travis
 Set the environment variables in your travis setting.
-*   TRAVIS_CONAN_USERNAME
-*   TRAVIS_CONAN_LOGIN_USERNAME
-*   TRAVIS_CONAN_PASSWORD
-*   TRAVIS_COVERITY_SCAN_TOKEN
+*   CONAN_USERNAME
+*   CONAN_LOGIN_USERNAME
+*   CONAN_PASSWORD
 
 ### Coverity
 If you want to use coverity to analyze your code, set the environment variables in your travis setting and push your commit to `coverity_scan` branch.
+*   COVERITY_SCAN_TOKEN
 *   TRAVIS_COVERITY_SCAN_PROJECT_NAME
 *   TRAVIS_COVERITY_SCAN_NOTIFICATION_EMAIL
 
 
 ## Appveyor
 Set the environment variables in your appveyor setting.
-*   APPVEYOR_CONAN_USERNAME
-*   APPVEYOR_CONAN_LOGIN_USERNAME
-*   APPVEYOR_CONAN_PASSWORD
+*   CONAN_USERNAME
+*   ONAN_LOGIN_USERNAME
+*   CONAN_PASSWORD
 
   
 
