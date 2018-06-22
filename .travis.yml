@@ -46,7 +46,7 @@ addons:
       description: "<Your project description here>"
     notification_email: yuanjunjie@kedacom.com
     build_command_prepend: "sudo conan install ."
-    build_command: "sudo build ."
+    build_command: "sudo conan build ."
     branch_pattern: coverity_scan
 
 script:
