@@ -79,8 +79,8 @@ class NodePlugin(ConanFile):
         '''%self.version)
         f.close()
 
-        self.run("node-gyp -C addon %(python)s configure %(compiler)s --arch=%(arch)s "%options)
-        self.run("node-gyp -C addon %(python)s build %(debug)s "%options)
+        # self.run("node-gyp -C addon %(python)s configure %(compiler)s --arch=%(arch)s "%options)
+        # self.run("node-gyp -C addon %(python)s build %(debug)s "%options)
 
         cmake = CMake(self)
         cmake.configure(source_folder='plugin')
