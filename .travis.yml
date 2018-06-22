@@ -45,8 +45,8 @@ addons:
       name: "yjjnls/plugin.node"
       description: "<Your project description here>"
     notification_email: yuanjunjie@kedacom.com
-    build_command_prepend: "sudo conan install ."
-    build_command: "sudo conan build ."
+    build_command_prepend: "mkdir -p build && cd build && sudo conan install .. && node-gyp -C ../addon configure"
+    build_command: "node-gyp -C ../addon build"
     branch_pattern: coverity_scan
 
 script:
